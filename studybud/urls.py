@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('base.urls'))   # 앱의 url과 프로젝트의 url을 연결해줌. 경로로 들어오는 사용자들을 base.urls로 보낸다.
+    path('', include('base.urls'))  # admin이 아닌 다른 경로로 들어오면, base의 urls로 역할을 위임한 코드 
 ]

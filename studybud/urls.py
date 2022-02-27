@@ -20,7 +20,11 @@ from django.http import HttpResponse
 def home(request):
     return HttpResponse('홈페이지')
 
+def room(request):
+    return HttpResponse('ROOM')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
+    path('room/', room)
 ]

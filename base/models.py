@@ -8,4 +8,4 @@ class Room(models.Model):
     # host = 
     # topic =
     name = models.CharField(max_length=200)
-    description = models.TextField(null=TRUE)   # description은 없어도 된다.
+    description = models.TextField(null=TRUE, blank=True)   # description은 없어도 된다.

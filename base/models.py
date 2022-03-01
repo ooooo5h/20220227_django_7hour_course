@@ -14,3 +14,7 @@ class Room(models.Model):
     
     def __str__(self):
         return self.name
+    
+class Message(models.Model):
+    # user =
+    room = models.ForeignKey(Room, on_delete=models.CASCADE) # 누가 부모(ROOM)를 삭제하면, 연결된 모든 메세지도 삭제하자 (CASCADE)

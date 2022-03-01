@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 # DB 테이블을 생성하는 곳
@@ -16,7 +17,7 @@ class Room(models.Model):
         return self.name
     
 class Message(models.Model):
-    # user =
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     room = models.ForeignKey(Room, on_delete=models.CASCADE) # 누가 부모(ROOM)를 삭제하면, 연결된 모든 메세지도 삭제하자 (CASCADE)
     body = models.TextField()
     updated = models.DateTimeField(auto_now=True) 

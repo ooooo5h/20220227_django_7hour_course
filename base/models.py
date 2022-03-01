@@ -18,3 +18,9 @@ class Room(models.Model):
 class Message(models.Model):
     # user =
     room = models.ForeignKey(Room, on_delete=models.CASCADE) # 누가 부모(ROOM)를 삭제하면, 연결된 모든 메세지도 삭제하자 (CASCADE)
+    body = models.TextField()
+    updated = models.DateTimeField(auto_now=True) 
+    created = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.body[0:50]

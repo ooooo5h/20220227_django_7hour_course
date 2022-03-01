@@ -4,6 +4,13 @@ from django.contrib.auth.models import User
 # Create your models here.
 # DB 테이블을 생성하는 곳
 
+class Topic(models.Model):
+    name = models.CharField(max_length=200)
+    
+    def __str__(self):
+        return self.name
+
+
 class Room(models.Model):
     # host = 
     # topic =

@@ -9,7 +9,7 @@ urlpatterns = [   # path(경로, view의 기능, 참조할 이름)
     
     path('', views.home, name='home'),
     path('room/<str:pk>/', views.room, name='room'),
-    path('profile/<str:pk>', views.userProfile, name='user-profile'),
+    path('profile/<str:pk>/', views.userProfile, name='user-profile'),
     
     path('create-room/', views.createRoom, name='create-room'),
     path('update-room/<str:pk>', views.updateRoom, name='update-room'),

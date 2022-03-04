@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('base.urls'))  # admin이 아닌 다른 경로로 들어오면, base의 urls로 역할을 위임한 코드 
+    path('', include('base.urls')),  # admin이 아닌 다른 경로로 들어오면, base의 urls로 역할을 위임한 코드 
+    path('api/', include('base.api.urls'))
 ]

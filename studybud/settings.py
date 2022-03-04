@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "corsheaders",
 ]
 
-AUTO_USER_MODEL = 'base.User'
+AUTH_USER_MODEL = 'base.User'
 
 MIDDLEWARE = [
     

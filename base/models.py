@@ -3,8 +3,15 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    pass
+    name = models.CharField(max_length=200, null=True)
+    email = models.EmailField(unique=True, null=True)
+    bio = models.TextField(null=True)
 
+    # avatar = 
+    
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+    
 # Create your models here.
 # DB 테이블을 생성하는 곳
 
